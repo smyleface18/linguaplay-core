@@ -45,10 +45,6 @@ linguaplay-core
 │ │ │
 │ │ └ index.ts
 │
-│ ├ zoom
-│ │ ├ zoom-meeting.type.ts
-│ │ ├ zoom-token.type.ts
-│ │ └ zoom-webhook.type.ts
 │
 │ ├ constants
 │ │ ├ api-routes.constant.ts
