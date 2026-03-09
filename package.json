@@ -3,6 +3,24 @@
     "version": "1.0.2",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./types": {
+            "import": "./dist/types/index.js",
+            "types": "./dist/types/index.d.ts"
+        },
+        "./constants": {
+            "import": "./dist/constants/index.js",
+            "types": "./dist/constants/index.d.ts"
+        },
+        "./api": {
+            "import": "./dist/api/index.js",
+            "types": "./dist/api/index.d.ts"
+        }
+    },
     "files": [
         "dist"
     ],
