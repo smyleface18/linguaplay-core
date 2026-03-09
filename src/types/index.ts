@@ -1,12 +1,4 @@
 // types.ts
-export enum Level {
-  A1 = "A1",
-  A2 = "A2",
-  B1 = "B1",
-  B2 = "B2",
-  C1 = "C1",
-  C2 = "C2",
-}
 
 export enum TypeQuestionCategory {
   LISTENING = "LISTENING",
@@ -15,25 +7,6 @@ export enum TypeQuestionCategory {
   VOCABULARY = "VOCABULARY",
   WRITING = "WRITING",
   SPEAKING = "SPEAKING",
-}
-
-export interface S3Object {
-  key: string;
-
-  type: string;
-
-  displayName?: string;
-
-  url?: string;
-
-  bucketName?: string;
-}
-
-export interface CoreEntity {
-  id: string;
-  active: boolean;
-  createdAt: Date;
-  updatedAt?: Date;
 }
 
 export interface CategoryQuestion extends CoreEntity {
@@ -62,33 +35,9 @@ export interface QuestionOption extends CoreEntity {
   questionId: string;
 }
 
-export interface Game {
-  questionText?: string;
-  questionImage?: string;
-  options: string[];
-}
-
-export interface PaginationInfo {
-  currentPage: number;
-  totalPages: number;
-  totalItems: number;
-  itemsPerPage: number;
-}
-
 // types/game.types.ts
 export interface GameQuestion extends Question {
   // Hereda de Question pero podemos extender si es necesario
-}
-
-export interface GameState {
-  connected: boolean;
-  gameStarted: boolean;
-  currentQuestion: GameQuestion | null;
-  questionNumber: number;
-  totalQuestions: number;
-  timeRemaining: number;
-  score: number;
-  userId: string;
 }
 
 export interface SocketEvents {
