@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@type/*": [
+        "src/types/*"
+      ]
+    },
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Node",

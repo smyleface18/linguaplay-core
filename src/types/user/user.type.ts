@@ -1,9 +1,9 @@
-import { Level } from "../common/enum.type";
-import { CoreEntity } from "./coreEntity.type";
+import { Level } from '@type/common/enum.type';
+import { CoreEntity, S3Object } from '@type/common/cores.type';
 
 export enum UserRole {
-  PLAYER = "PLAYER",
-  ADMIN = "ADMIN",
+  PLAYER = 'PLAYER',
+  ADMIN = 'ADMIN',
 }
 
 export interface User extends CoreEntity {
@@ -13,8 +13,5 @@ export interface User extends CoreEntity {
   score: number;
   userRole: UserRole;
   level: Level;
-  avatar?: {
-    url: string;
-    key?: string;
-  } | null;
+  avatar?: S3Object;
 }
